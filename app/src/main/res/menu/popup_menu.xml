@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_report_lost_item"
+        android:title="Report Lost Item" />
+    <item
+        android:id="@+id/menu_report_found_item"
+        android:title="Report Found Item" />
+</menu>

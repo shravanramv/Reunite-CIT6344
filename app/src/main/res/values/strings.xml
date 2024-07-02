@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ReUnite</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="don_t_have_an_account_register">Don\'t have an account? Register</string>
+</resources>
