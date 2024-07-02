@@ -3,6 +3,8 @@ package com.example.reuniteapp
 import com.example.reuniteapp.ui.LoginActivity
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -13,6 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.content.SharedPreferences
 import android.util.Log
 import androidx.preference.PreferenceManager
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,5 +61,28 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val newReportButton: Button = findViewById(R.id.btn_new_report)
+        newReportButton.setOnClickListener {
+            // Handle the button click here
+            createNewReport()
+        }
+    }
+
+    private fun createNewReport() {
+        // Your logic to handle creating a new report
+        // For example, navigate to a new activity or show a dialog
+    }
+
+    private fun logout() {
+        // Clear the login state in SharedPreferences
+        val editor = sharedPreferences.edit()
+        editor.putBoolean("isLoggedIn", false)
+        editor.apply()
+
+        // Navigate to the login page
+        val intent = Intent(this, LoginActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 }
