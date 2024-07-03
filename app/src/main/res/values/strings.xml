@@ -5,4 +5,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="profile">Profile</string>
     <string name="don_t_have_an_account_register">Don\'t have an account? Register</string>
+    <string name="fab_desc">Add new report</string>
 </resources>

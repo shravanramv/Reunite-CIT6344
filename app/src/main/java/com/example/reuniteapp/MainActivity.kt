@@ -15,7 +15,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import android.content.SharedPreferences
 import android.util.Log
 import androidx.preference.PreferenceManager
-import android.widget.Button
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity : AppCompatActivity() {
 
@@ -62,10 +62,9 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        val newReportButton: Button = findViewById(R.id.btn_new_report)
-        newReportButton.setOnClickListener {
-            // Handle the button click here
-            createNewReport()
+        val fab: FloatingActionButton = findViewById(R.id.fab)
+        fab.setOnClickListener {
+            navController.navigate(R.id.action_to_newPage) // Replace with your actual action to navigate to the new page
         }
     }
 
