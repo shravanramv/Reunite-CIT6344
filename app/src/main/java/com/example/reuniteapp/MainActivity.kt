@@ -3,7 +3,6 @@ package com.example.reuniteapp
 import com.example.reuniteapp.ui.LoginActivity
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -64,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
         val fab: FloatingActionButton = findViewById(R.id.fab)
         fab.setOnClickListener {
-            navController.navigate(R.id.action_to_newPage) // Replace with your actual action to navigate to the new page
+            navController.navigate(R.id.action_navigation_home_to_addReportFragment)
         }
     }
 

@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.reuniteapp.R
-import com.example.reuniteapp.data.AppDatabase
 import com.example.reuniteapp.databinding.FragmentProfileBinding
 import com.example.reuniteapp.models.UserProfile
 import com.example.reuniteapp.ui.LoginActivity
@@ -52,8 +51,8 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
-        findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
+//    private fun replaceFragment(fragment: Fragment) {
+//        findNavController().navigate(R.id.action_profileFragment_to_editProfileFragment)
     }
 
     private fun logoutUser() {
@@ -93,7 +92,10 @@ class ProfileFragment : Fragment() {
             } else {
                 Log.e(TAG, "User ID not found in SharedPreferences")
                 Toast.makeText(requireContext(), "Please log in to view your profile", Toast.LENGTH_LONG).show()
-                // TODO: Navigate to login screen if not logged in
+                // Navigate to login screen if not logged in
+                val intent = Intent(requireContext(), LoginActivity::class.java)
+                startActivity(intent)
+                requireActivity().finish()
             }
         }
     }
@@ -138,7 +140,7 @@ class ProfileFragment : Fragment() {
         _binding = null
     }
 
-    companion object {
+    companion object Profile{
         private const val TAG = "ProfileFragment"
     }
 }
